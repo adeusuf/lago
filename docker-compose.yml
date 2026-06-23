@@ -99,8 +99,9 @@ services:
       POSTGRES_SCHEMA: public
     volumes:
       - lago_postgres_data:/data/postgres
-    ports:
-      - ${POSTGRES_PORT:-5432}:${POSTGRES_PORT:-5432}
+    # REMOVE OR COMMENT OUT THESE LINES BELOW:
+    # ports:
+    # - ${POSTGRES_PORT:-5432}:${POSTGRES_PORT:-5432}
 
   redis:
     <<: *redis-image
