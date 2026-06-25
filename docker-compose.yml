@@ -124,7 +124,7 @@ services:
     depends_on:
       db:
         condition: service_healthy
-        restart: true
+        restart: no
     command: ["./scripts/migrate.sh"]
     environment:
       <<: *backend-env
