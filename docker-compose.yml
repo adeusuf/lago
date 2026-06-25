@@ -196,8 +196,6 @@ services:
     container_name: lago-worker
     restart: unless-stopped
     depends_on:
-      migrate:
-        condition: service_completed_successfully
       db:
         condition: service_healthy
         restart: true
@@ -308,8 +306,6 @@ services:
     container_name: lago-clock
     restart: unless-stopped
     depends_on:
-      migrate:
-        condition: service_completed_successfully
       db:
         condition: service_healthy
         restart: true
